@@ -118,18 +118,29 @@ header {
 
 .banner {
     position: absolute;
-    top: 30%;
-    left: 15%;
+    top: 15%;
+    left: 10%;
 }
 
 .banner h1 {
     color: #ffffff;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-family: var(--font-primary);
     font-weight: 300;
     text-shadow: 0.2rem 0.3rem 2px RGBa(0, 0, 0, 0.4);
-    line-height: 3.5rem;
-    margin-bottom: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
+}
+.banner h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: var(--font-primary);
+    font-weight: 200;
+    text-shadow: 0.2rem 0.3rem 2px RGBa(0, 0, 0, 0.4);
+    line-height: 1.7rem;
+    margin-bottom: 1rem;
     opacity: 0;
     animation: moveBanner 1s 0.5s forwards;
 }
@@ -139,30 +150,35 @@ header {
     color: #fff;
     font-size: 2rem;
     text-shadow: 0.2rem 0.2rem RGBa(0, 0, 0, 0.4);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     opacity: 0;
     animation: moveBanner 1s 0.7s forwards;
 }
 
 .banner button {
     font-family: var(--font-action);
-    color: #fff;
+    color: #eee;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    background: #ff00cc;
+    background: #6a3093;
     background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
     background: linear-gradient(to right, #a044ff, #6a3093);
     padding: 1rem 3rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
     animation: moveBanner 1s 0.9s forwards;
 }
 
 .banner button:hover {
-    /* opacity: 0.8; */
-    color: #000;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.banner button a{
+    opacity: 0.8;
+    color: #fff;
 }
 
 @keyframes moveBanner {
@@ -174,6 +190,44 @@ header {
         transform: translateY(0) rotateY(0deg);
         opacity: 1;
     }
+}
+
+.banner2{
+    position: absolute;
+    background-color: #110c0cb2;
+    width: 70%;
+    max-width: 625.2px;
+    height: auto;
+    top: 55%;
+    left: 10%;
+
+}
+.banner2 h3{
+    font-family: var(--font-primary);
+    font-weight: 500;
+    text-shadow: 0.2rem 0.3rem 2px RGBa(0, 0, 0, 0.4);
+    line-height: 2rem;
+    font-family: var(--font-secundary);
+    font-size: 1.3rem;
+    color: #eee;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+}
+
+.banner2 ul li{
+    font-family: var(--font-secundary);
+    font-weight: 200;
+    text-shadow: 0.2rem 0.3rem 2px RGBa(0, 0, 0, 0.4);
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+    color: #eee;
+    margin-left: 3rem;
+    list-style: circle;
+    width: 70%;
+    margin-bottom: .2rem;
+    padding-bottom: .5rem;
 }
 
 .sidebar {
