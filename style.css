@@ -43,7 +43,7 @@ html{
     top: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     cursor: pointer;
     transition: all 1s;
 }
@@ -73,7 +73,9 @@ html{
 }
 
 .show-menu #line3 {
-    transform: rotate(-45deg) translate(0.1rem, -0.4rem);
+    /* transform: rotate(-45deg) translate(0.1rem, -0.4rem); */
+    transform: rotate(-45deg) translate(0.7rem, -1rem);
+    
 }
 
 .hamburguer span {
@@ -216,7 +218,6 @@ header {
 }
 
 .banner2 h3 {
-    font-family: var(--font-primary);
     font-weight: 500;
     text-shadow: 0.2rem 0.3rem 2px RGBa(0, 0, 0, 0.4);
     line-height: 2rem;

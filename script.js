@@ -2,8 +2,8 @@ var hamburguer = document.querySelector(".hamburguer");
 var click = document.querySelector(".menu-link")
 
 hamburguer.addEventListener("click", function () {
-    var sidebar = document.querySelector(".container").classList.toggle("show-menu");
-});
+    var sidebar = document.querySelector(".container").classList.toggle("show-menu")
+})
 
 // click.addEventListener("click", function () {
 //     var sidebar = document.querySelector(".container").classList.toggle("hide-menu");
@@ -29,7 +29,7 @@ document.querySelector("#prazo").addEventListener("change", atualizaPreco)
 function CarregaPrazo(){
     document.querySelector("#prazo").value = 5
     atualizaPreco()
-};
+}
 
 function atualizaPreco(){
     const qtde = document.querySelector("#qtde").value
@@ -48,4 +48,4 @@ function atualizaPreco(){
     }else{
         document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} semanas`
     }
-};
+}
