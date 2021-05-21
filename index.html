@@ -5,7 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style-screen-1024-desktop.css" media="screen and (max-device-width: 2560px)" />
+    <link rel="stylesheet" type="text/css" href="style-screen-768-mobile.css" media="screen and (max-device-width: 768px)" />
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png" />
@@ -68,7 +70,7 @@
             <div class="sessao-header">
                 <h1>Conhecimento</h1>
             </div>
-            <div class="conhecimentos">
+            <div class="conhecimentos conhecimentos-flex conhecimentos-grid">
                 <div class="conhecimento">
                     <div class="conhecimento-header">
                         <i class="fab fa-html5"></i>
@@ -153,7 +155,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="conhecimentos-img-wrapper">
+                <div class="conhecimentos-img-wrapper conhecimentos-img-wrapper-big big-img">
                     <img src="imagens/conhecimentos.png" alt="imagem conhecimento" /></div>
             </div>
         </section>
@@ -228,7 +230,7 @@
             </div>
         </section>
 
-        <section class="sessao-orcamento" id="orcamento">
+        <section class="sessao-orcamento sessao-orcamento-flex" id="orcamento">
             <div class="orcamento-wrapper">
                 <h1>Faça um Orçamento</h1>
                 <form>
@@ -250,7 +252,7 @@
                     </div>
                     <label for="prazo">Prazo</label>
                     <input type="range" name="prazo" id="prazo" min="1" max="10" value="10">
-                    <label id="preco">R$ 0,00</label>
+                    <label id="preco" class="preco-align" >R$ 0,00</label>
                     <button class="btn btn-orcamento" type="submit">Enviar</button>
                 </form>
             </div>
