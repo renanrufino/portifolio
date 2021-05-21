@@ -5,6 +5,40 @@ hamburguer.addEventListener("click", function () {
     var sidebar = document.querySelector(".container").classList.toggle("show-menu");
 });
 
-click.addEventListener("click", function () {
-    var sidebar = document.querySelector(".container").classList.toggle("hide-menu");
-});
+// click.addEventListener("click", function () {
+//     var sidebar = document.querySelector(".container").classList.toggle("hide-menu");
+// });
+
+var qtdeAtual = document.querySelector("#qtde").addEventListener("change", atualizaPreco)
+var jsAtual = document.querySelector("#js").addEventListener("change", function(){
+    const temjs = document.querySelector("#js").checked
+    if(temjs){
+        document.querySelector("#qtde").value = 1
+    }
+    atualizaPreco()
+} )
+var LayoutSim = document.querySelector("#layout-sim").addEventListener("change", atualizaPreco)
+var LayoutNao = document.querySelector("#layout-nao").addEventListener("change", atualizaPreco)
+var prazoAtual = document.querySelector("#prazo").addEventListener("change", function(){
+    const prazo = document.querySelector("#prazo").value
+    if(prazo==1){
+        document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} semana`
+    }else{
+        document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} semanas`
+    }
+    atualizaPreco()
+} )
+
+function atualizaPreco(){
+    const qtde = document.querySelector("#qtde").value
+    const temjs = document.querySelector("#js").checked
+    const incluiLayput = document.querySelector("#layout-sim").checked
+    const prazo = document.querySelector("#prazo").value
+    
+    let preco = qtde * 100
+    if(temjs) preco *= 1.1
+    if(incluiLayput) preco += 500
+    let taxaUrgencia = 1 - prazo*0.1
+    preco *= 1 + taxaUrgencia
+    document.querySelector("#preco").innerHTML = `R$ ${preco.toFixed(2)}`
+}
