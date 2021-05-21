@@ -283,7 +283,9 @@ header {
 
 .menu-link:hover {
     color: #6a3093;
-    /* font-weight: 500; */
+    font-weight: 800;
+    text-shadow: 0 0.1rem .3rem RGBa(0, 0, 0, 0.4);
+    font-size: 2rem;
 }
 
 .social-media {

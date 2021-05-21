@@ -13,7 +13,7 @@
     <title>Portfólio</title>
 </head>
 
-<body>
+<body onLoad="CarregaPrazo()">
     <div class="container">
         <div class="hamburguer">
             <div class="line" id="line1"></div>
@@ -249,7 +249,7 @@
                             
                         </div>
                         <label for="prazo">Prazo</label>
-                        <input type="range" name="prazo" id="prazo" min="1" max="10">
+                        <input type="range" name="prazo" id="prazo" min="1" max="10" value="10">
                         <label id="preco">R$ 0,00</label>
 
                         <button class="btn btn-orcamento"type="submit" >Enviar</button>
